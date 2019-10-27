@@ -1,0 +1,14 @@
+{
+  "name": "joyce-andrey",
+  "version": "1.0.0",
+  "description": "Joyce and Andrey wedding website",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Melody Reebs",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.17.1"
+  }
+}
