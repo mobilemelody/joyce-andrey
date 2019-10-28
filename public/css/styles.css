@@ -1,0 +1,271 @@
+@import url('https://fonts.googleapis.com/css?family=Montserrat:400,600,700&display=swap');
+
+body {
+  font-family: "Montserrat";
+}
+
+/* Headers */
+h1 {
+  font-size: 6rem;
+  font-weight: 700;
+}
+
+h2 {
+  font-size: 3rem;
+  font-weight: 700;
+}
+
+h3 {
+
+}
+
+h4 {
+  font-weight: 600;
+  font-size: 1rem;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+}
+
+h5 {
+  font-size: 1rem;
+  font-weight: 600;
+}
+
+/* General Styles */
+.button {
+  font-weight: 600;
+  display: inline-block;
+  letter-spacing: 0.1em;
+  padding: .7rem 1rem;
+  text-align: center;
+  text-transform: uppercase;
+  transition: 0.3s;
+  vertical-align: middle;
+}
+
+.button:hover {
+  text-decoration: none;
+}
+
+.button-grey {
+  background: #d8d8d8;
+  color: #28384C;
+}
+
+.button-grey:hover {
+  background: #28384C;
+  color: #d8d8d8;
+}
+
+.button-blue {
+  border: 2px solid #28384C;
+  color: #28384C;
+}
+
+.button-blue:hover {
+  background-color: #28384C;
+  border: 2px solid #28384C;
+  color: #8FB4E0;
+}
+
+.section-container {
+  margin: 0 50px;
+}
+
+.inner-content {
+  padding: 20px 50px;
+}
+
+/* Menu */
+#menu-container {
+  height: 0;
+  position: sticky;
+  top: 0px;
+  width: 50px;
+  z-index: 999;
+}
+
+#menu-link-container {
+  height: 100vh;
+  position: relative;
+  white-space: nowrap;
+  width: 50px;
+}
+
+#menu-items-outer-container {
+  height: 0;
+  position: sticky;
+  top: 60px;
+  width: 300px;
+  z-index: 999;
+}
+
+#menu-items-container {
+  background-color: #28384C;
+  height: 480px;
+  position: relative;
+  width: 300px;
+}
+
+.menu-header-link {
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  transform: rotate(-90deg);
+  right: -10px;
+}
+
+.menu-header-link:hover {
+  color: #8FB4E0;
+}
+
+.menu-close-link {
+  color: #FFFFFF;
+}
+
+.menu-open-link {
+  margin-bottom: 0;
+}
+
+#menu-items a.nav-link {
+  color: #FFFFFF;
+  font-size: 2rem;
+  font-weight: 700;
+}
+
+#menu-items a.nav-link:hover {
+  color: #8FB4E0;
+}
+
+#menu-container .collapsing.width {
+  width: 0;
+  height: auto;
+  .transition(width 0.35s ease);
+}
+
+/* Dot Navigation Menu */
+#dot-nav-outer-container {
+  float: right;
+  height: 0;
+  position: sticky;
+  top: 0;
+  width: 50px;
+  z-index: 999;
+}
+
+#dot-nav-container {
+  position: relative;
+  height: 100vh;
+}
+
+#dot-nav-items {
+  cursor: pointer;
+  position: absolute;
+  right: 20px;
+  top: calc(50% - 72px);
+}
+
+.dot-nav-link {
+  background: #F5F5F5;
+  border-radius: 5px;
+  display: inline-block;
+  height: 10px;
+  margin-right: 5px;
+  width: 10px;
+}
+
+.dot-nav-link:hover {
+  background: #8FB4E0;
+}
+
+/* Landing Section */
+#header-container {
+  height: 60px;
+}
+
+#landing-container {
+  position: relative;
+}
+
+#landing-background {
+  background-color: #F1CFC4;
+  height: 600px;
+  margin-left: 50px;
+  position: absolute;
+  top: 30px;
+  width: calc(100vw - 100px);
+  z-index: -999;
+}
+
+#cover-photo-container {
+  background-image: url('../img/photolanding.png');
+  background-position: 50% 30%;
+  background-size: cover;
+  height: 600px;
+}
+
+#landing-content-container {
+  bottom: 30px;
+  padding-left: 30px;
+  position: absolute;
+}
+
+#rsvp-button a {
+  width: 135px;
+}
+
+/* Us Section */
+#us-container {
+  background: #F1CFC4;
+  margin-right: 0;
+  margin-top: 70px;
+}
+
+#us-heading h1 {
+  color: #FFFFFF;
+}
+
+#us-heading h1 .h1-subheading {
+  color: #000000;
+  font-size: 1rem;
+  font-weight: 400;
+  padding-left: 20px;
+}
+
+#us-photos-container {
+  overflow: scroll;
+  padding-bottom: 50px;
+}
+
+/* Info Section */
+#info-container {
+  background-image: url('/img/starmapbg.png');
+  background-size: cover;
+}
+
+#info-heading h2 {
+  color: #FFFFFF;
+}
+
+#info-heading h2 .h2-subheading {
+  font-size: 1rem;
+  font-weight: 400;
+  padding-left: 20px;
+}
+
+.info-card-content {
+  background: #28384C;
+  border: 1px solid #8Fb4E0;
+  color: #FFFFFF;
+  height: 500px;
+  padding: 10px;
+  text-align: center;
+}
+
+.info-card-content h4 {
+  text-transform: uppercase;
+}
+
+.info-card-content h2 {
+  color: #8FB4E0;
+}

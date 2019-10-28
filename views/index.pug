@@ -1,0 +1,107 @@
+doctype html
+html(lang='en')
+  head
+    // Meta tags
+    meta(charset='utf-8')
+    meta(name='viewport', content='width=device-width, initial-scale=1, shrink-to-fit=no')
+
+    title Joyce & Andrey | April 4, 2020
+
+    // Stylesheets
+    link(rel='stylesheet', href='https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css')
+    link(rel='stylesheet', href='/css/styles.css')
+
+  body
+
+    // Header
+    div#header-container.container
+      div.row.py-3
+        h4.mx-auto Joyce & Andrey
+
+    // Menu
+    div#menu-container
+      div#menu-link-container
+        h4.menu-header-link.menu-open-link(data-toggle='collapse', data-target='#menu-items-container') Menu +
+    div#menu-items-outer-container
+      div#menu-items-container.p-5.collapse
+        h4.menu-header-link.menu-close-link(data-toggle='collapse', data-target='#menu-items-container') Menu -
+        div#menu-items
+          nav.nav.flex-column
+            a.nav-link(href='#us') us.
+            a.nav-link(href='#info') info.
+            a.nav-link(href='#lisbon') lisbon.
+            a.nav-link(href='#misc') misc.
+            a.nav-link(href='#rsvp') rsvp.
+            a.nav-link(href='#photos') photos.
+    
+    // Dot Navigation Menu
+    div#dot-nav-outer-container
+      div#dot-nav-container
+        div#dot-nav-items
+          div.dot-nav-item
+            a.dot-nav-link(href='#us', data-toggle='tooltip', data-placement='left', title='us.')
+          div.dot-nav-item
+            a.dot-nav-link(href='#info', data-toggle='tooltip', data-placement='left', title='info.')
+          div.dot-nav-item
+            a.dot-nav-link(href='#lisbon', data-toggle='tooltip', data-placement='left', title='lisbon.')
+          div.dot-nav-item
+            a.dot-nav-link(href='#misc', data-toggle='tooltip', data-placement='left', title='misc.')
+          div.dot-nav-item
+            a.dot-nav-link(href='#rsvp', data-toggle='tooltip', data-placement='left', title='rsvp.')
+          div.dot-nav-item
+            a.dot-nav-link(href='#photos', data-toggle='tooltip', data-placement='left', title='photos.')
+
+    // Landing Section
+    div#landing-container.section-container
+      div#cover-photo-container
+        div#landing-content-container
+          div#monogram.pb-3
+            img(src='/img/AJmonogram.svg')
+          div#rsvp-button
+            a.button.button-grey(href='#rsvp') RSVP!
+      div#landing-background
+
+    // Us Section
+    div#us-container.section-container
+      div.inner-content
+        div#us-heading
+          h1#us hi.
+            span.h1-subheading This is what we look like doing stuff together.
+      div#us-photos-container
+        img(src='/img/imagegallery.png')
+
+    // Info Section
+    div#info-container.section-container
+      div.inner-content
+        div#info-heading
+          h2#info info.
+            span.h2-subheading Let's party!
+        div.row
+          div.info-card.col-md-5
+            div.info-card-content
+              h4 Friday
+              h2 April 3
+              h5 Come say hello and have a drink with us!
+              h3 8pm, Location
+              h3 Name Lorem Ipsum
+              h5 Address Lorem Ipsum,
+              h5 Lisbon, XXXXX
+              h4 Map / More Info
+          div.info-card.col-md-7
+            div.info-card-content
+              h4 Saturday
+              h2 April 4
+              h5 Join us at 3pm at the
+              h3 Palacio dos Marqueses de Frontiera
+              h5 Largo Sao Domingos de Benfica 1
+              h5 Largo Sao Domingos de Benfica 1
+              h4 Map / More Info
+
+    // Section Transition Photo
+    div#transition-photo-1.transition-photo-container
+
+    // Scripts
+    script(src='https://code.jquery.com/jquery-3.3.1.slim.min.js')
+    script(src='https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js')
+    script(src='https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js')
+    script(src='/js/scripts.js')
