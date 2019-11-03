@@ -5,21 +5,22 @@ html(lang='en')
     meta(charset='utf-8')
     meta(name='viewport', content='width=device-width, initial-scale=1, shrink-to-fit=no')
 
-    title Joyce & Andrey | April 4, 2020
+    title Joyce &amp; Andrey | April 4, 2020
 
     // Stylesheets
     link(rel='stylesheet', href='https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css')
     link(rel='stylesheet', href='/css/styles.css')
+    link(rel='stylesheet', href='https://api.mapbox.com/mapbox.js/v3.1.1/mapbox.css')
 
   body
 
     // Header
     div#header-container.container
       div.row.py-3
-        h4.mx-auto Joyce & Andrey
+        h4.mx-auto Joyce &amp; Andrey
 
     // Menu
-    div#menu-container
+    div#menu-container.d-none.d-sm-block
       div#menu-link-container
         h4.menu-header-link.menu-open-link(data-toggle='collapse', data-target='#menu-items-container') Menu +
     div#menu-items-outer-container
@@ -35,7 +36,7 @@ html(lang='en')
             a.nav-link(href='#photos') photos.
     
     // Dot Navigation Menu
-    div#dot-nav-outer-container
+    div#dot-nav-outer-container.d-none.d-sm-block
       div#dot-nav-container
         div#dot-nav-items
           div.dot-nav-item
@@ -64,38 +65,56 @@ html(lang='en')
     // Us Section
     div#us-container.section-container
       div.inner-content
-        div#us-heading
+        div#us-heading.section-heading
           h1#us hi.
-            span.h1-subheading This is what we look like doing stuff together.
+          div.subheading This is what we look like doing stuff together.
       div#us-photos-container
         img(src='/img/imagegallery.png')
 
     // Info Section
     div#info-container.section-container
       div.inner-content
-        div#info-heading
+        div#info-heading.section-heading
           h2#info info.
-            span.h2-subheading Let's party!
-        div.row
-          div.info-card.col-md-5
-            div.info-card-content
-              h4 Friday
-              h2 April 3
-              h5 Come say hello and have a drink with us!
-              h3 8pm, Location
-              h3 Name Lorem Ipsum
-              h5 Address Lorem Ipsum,
-              h5 Lisbon, XXXXX
-              h4 Map / More Info
-          div.info-card.col-md-7
-            div.info-card-content
-              h4 Saturday
-              h2 April 4
-              h5 Join us at 3pm at the
-              h3 Palacio dos Marqueses de Frontiera
-              h5 Largo Sao Domingos de Benfica 1
-              h5 Largo Sao Domingos de Benfica 1
-              h4 Map / More Info
+          div.subheading Let's party!
+        div.row.info-card-container.pt-5
+          div#drinks-info.info-card.col-md-5.pb-3
+            div.info-card-inner
+              div.info-card-content.p-3
+                h4.py-2 Friday
+                h2.py-3 April 3
+                h5.py-4 Come say hello and have a drink with us!
+                h3.pt-2 8pm, Location
+                h3 Name Lorem Ipsum
+                h5.pt-2 Address Lorem Ipsum,
+                h5 Lisbon, XXXXX
+                h4.flip-button.pt-4 Map / More Info
+              div.info-card-back.p-3
+                div.info-card-map-text
+                  p.text-center More notes if needed Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas quam erat, feugiat eu turpis id
+                  button Open in Google Maps
+                div#drinks-map.info-card-map-container
+                div.info-card-back-button
+                  button.flip-button Back
+          div#ceremony-info.info-card.col-md-7.pb-3
+            div.info-card-inner
+              div.info-card-content.p-3
+                h4.pt-2 Saturday
+                h2.py-3 April 4
+                h5.py-4 Join us at 3pm at the
+                h3.pt-2 Palacio dos Marqueses de Frontiera
+                h5.pt-2 Largo Sao Domingos de Benfica 1
+                h5 Fronteira Palace, Lisbon 1500-554
+                h5.py-3 Ceremony to be followed by drinks, dinner, dancing.
+                h4.flip-button.pt-4 Map / More Info
+              div.info-card-back.p-3.row
+                div.info-card-map-text.col-md-7
+                  p.text-center Attire: Relaxed Formal Dresses of all lengths, Suits, or Dinner Jackets. As the garden has gravel, we suggest shoes or a change of shoes that are ok on it. Bringing a comfortable change of shoes is encouraged regardless!
+                  p.text-center April nights can be chilly in Lisbon, we recommend bringing an extra layer.
+                  p.text-center There will be childcare and entertainment for children throughout the day.
+                  button.flip-button Back
+                div#ceremony-map.info-card-map-container.col-md-5
+
 
     // Section Transition Photo
     div#transition-photo-1.transition-photo-container
@@ -104,4 +123,6 @@ html(lang='en')
     script(src='https://code.jquery.com/jquery-3.3.1.slim.min.js')
     script(src='https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js')
     script(src='https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js')
+    script(src='https://api.mapbox.com/mapbox.js/v3.1.1/mapbox.js')
     script(src='/js/scripts.js')
+    script(src='/js/maps.js')

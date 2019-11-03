@@ -9,4 +9,9 @@ $(document).ready(function(){
 	$('a.nav-link').on("click", function() {
 		$('#menu-items-container').collapse('hide');
 	});
+
+	$('.flip-button').on('click', function() {
+		$(this).closest('.info-card').toggleClass('flipped');
+	});
+
 });
