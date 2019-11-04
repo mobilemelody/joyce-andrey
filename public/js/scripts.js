@@ -14,4 +14,10 @@ $(document).ready(function(){
 		$(this).closest('.info-card').toggleClass('flipped');
 	});
 
+	$("[data-toggle='tab']").click(function() {
+		$('.active').removeClass('active');
+	})
+
+	$('body').scrollspy({ target: '#dot-nav-container' })
+
 });

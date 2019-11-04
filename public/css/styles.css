@@ -2,6 +2,7 @@
 
 body {
   font-family: "Montserrat";
+  position: relative;
 }
 
 /* Headers */
@@ -37,6 +38,10 @@ h5 {
 }
 
 /* General Styles */
+a {
+  color: #2267B9;
+}
+
 .button {
   font-weight: 600;
   display: inline-block;
@@ -46,6 +51,10 @@ h5 {
   text-transform: uppercase;
   transition: 0.3s;
   vertical-align: middle;
+}
+
+.button a:hover {
+  text-decoration: none;
 }
 
 .button:hover {
@@ -63,6 +72,7 @@ h5 {
 }
 
 .button-blue {
+  background: transparent;
   border: 2px solid #28384C;
   color: #28384C;
 }
@@ -70,11 +80,23 @@ h5 {
 .button-blue:hover {
   background-color: #28384C;
   border: 2px solid #28384C;
-  color: #8FB4E0;
+  color: #FFFFFF;
+}
+
+.button-white {
+  background: transparent;
+  border: 2px solid #FFFFFF;
+  color: #FFFFFF;
+}
+
+.button-white:hover {
+  background-color: #8FB4E0;
+  border: 2px solid #8FB4E0;
+  color: #28384C;
 }
 
 .section-container {
-  margin: 0 50px;
+  margin-left: 50px;
 }
 
 .section-heading {
@@ -88,6 +110,10 @@ h5 {
 
 .inner-content {
   padding: 50px;
+}
+
+.form-control {
+  border-radius: 0;
 }
 
 /* Menu */
@@ -174,6 +200,7 @@ h5 {
 
 #dot-nav-items {
   cursor: pointer;
+  display: block;
   position: absolute;
   right: 20px;
   top: calc(50% - 72px);
@@ -185,10 +212,15 @@ h5 {
   display: inline-block;
   height: 10px;
   margin-right: 5px;
+  padding: 0;
   width: 10px;
 }
 
 .dot-nav-link:hover {
+  background: #8FB4E0;
+}
+
+.dot-nav-link.active {
   background: #8FB4E0;
 }
 
@@ -303,6 +335,7 @@ h5 {
   backface-visibility: hidden;
   background: #FFFFFF;
   height: 500px;
+  overflow-y: scroll;
   position: absolute;
   transform: rotateY(180deg);
 }
@@ -311,8 +344,112 @@ h5 {
   cursor: pointer;
 }
 
+.flip-button:hover,
+.info-card-back-button .flip-button:hover {
+  color: #8FB4E0;
+}
+
 #drinks-map {
-  height: 300px;
+  height: 250px;
+}
+
+.info-card-back .button {
+  letter-spacing: 0;
+  text-transform: none;
+}
+
+.info-card-back-button .flip-button {
+  color: #28384C;
+  font-weight: 600;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+}
+
+.transition-photo-container {
+  margin-left: 50px;
+  z-index: -9999;
+}
+
+#transition-photo-1 {
+  background-image: url('/img/photoinfo.png');
+  background-size: cover;
+  background-position: 15% 100%;
+  height: 600px;
+  width: 100%;
+}
+
+/* Lisbon Section */
+#lisbon-container {
+  background: #FFFFFF;
+}
+
+.sub-menu .sub-menu-item {
+  margin-right: 20px;
+}
+
+.sub-menu a.sub-menu-item {
+  color: #000000;
+}
+
+.sub-menu a.sub-menu-item.active,
+.sub-menu a.sub-menu-item:hover {
+  border-bottom: 1.5px solid #8FB4E0;
+  text-decoration: none;
+}
+
+#lisbon-container .card {
+  border: none;
+}
+
+#transition-photo-2 {
+  background-image: url('/img/photomisc.png');
+  background-size: cover;
+  background-position: 80% 30%;
+  height: 600px;
+  width: 100%;
+}
+
+/* Misc Section */
+#misc-container {
+  background: #F1CFC4;
+}
+
+#misc-heading.section-heading {
+  display: block;
+}
+
+#misc-heading.section-heading h2 {
+  color: #FFFFFF;
+}
+
+/* RSVP Section */
+#rsvp-container {
+  background: #28384C;
+  color: #FFFFFF;
+}
+
+#rsvp-form label {
+  font-weight: 600;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+}
+
+#rsvp-form .form-inline input[type="radio"].form-check-input {
+  margin-top: -5px;
+  margin-right: 5px;
+}
+
+/* Photos Section */
+#photos-container {
+  background: #FFFFFF;
+}
+
+#photos-content-container {
+  align-items: center;
+  background: #D8D8D8;
+  display: flex;
+  height: 500px;
+  justify-content: center;
 }
 
 /* Mobile Styles */
@@ -327,5 +464,18 @@ h5 {
 
   #landing-background {
     width: calc(100vw - 50px);
+  }
+
+  .transition-photo-container {
+    margin-left: 0;
+  }
+
+  #lisbon-container .section-heading {
+    display: block;
+  }
+
+  #lisbon-container .section-heading .subheading {
+    padding-left: 0;
+    padding-top: 10px;
   }
 }
