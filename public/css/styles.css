@@ -244,7 +244,7 @@ a {
 }
 
 #cover-photo-container {
-  background-image: url('../img/photolanding.png');
+  background-image: url('http://joyce-andrey.s3.amazonaws.com/photolanding.png');
   background-position: 50% 30%;
   background-size: cover;
   height: 600px;
@@ -470,11 +470,13 @@ a {
     margin-left: 0;
   }
 
-  #lisbon-container .section-heading {
+  #lisbon-container .section-heading,
+  #photos-container .section-heading {
     display: block;
   }
 
-  #lisbon-container .section-heading .subheading {
+  #lisbon-container .section-heading .subheading,
+  #photos-container .section-heading .subheading {
     padding-left: 0;
     padding-top: 10px;
   }
