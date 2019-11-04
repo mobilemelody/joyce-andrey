@@ -18,6 +18,6 @@ $(document).ready(function(){
 		$('.active').removeClass('active');
 	})
 
-	$('body').scrollspy({ target: '#dot-nav-container' })
+	$('body').scrollspy({ target: '#dot-nav-items' })
 
 });
