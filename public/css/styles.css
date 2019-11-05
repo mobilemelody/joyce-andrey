@@ -235,7 +235,7 @@ a {
 
 #cover-photo-container {
   background-image: url('https://joyce-andrey.s3.amazonaws.com/photolanding.png');
-  background-position: 50% 30%;
+  background-position: 50% 35%;
   background-size: cover;
   min-height: 600px;
   height: 100vh;
@@ -247,7 +247,7 @@ a {
 }
 
 #landing-content-container {
-  bottom: 30px;
+  bottom: 80px;
   padding-left: 30px;
   position: absolute;
 }
@@ -257,11 +257,8 @@ a {
 }
 
 /* Us Section */
-#us-container {
+#us {
   background: #F1CFC4;
-}
-
-#us-heading {
 }
 
 #us-heading h1 {
@@ -278,7 +275,7 @@ a {
 }
 
 /* Info Section */
-#info-container {
+#info {
   background-image: url('https://joyce-andrey.s3.amazonaws.com/starmapbg.png');
   background-size: cover;
 }
@@ -389,7 +386,7 @@ a {
 }
 
 /* Lisbon Section */
-#lisbon-container {
+#lisbon {
   background: #FFFFFF;
 }
 
@@ -407,7 +404,7 @@ a {
   text-decoration: none;
 }
 
-#lisbon-container .card {
+#lisbon .card {
   border: none;
 }
 
@@ -420,7 +417,7 @@ a {
 }
 
 /* Misc Section */
-#misc-container {
+#misc {
   background: #F1CFC4;
 }
 
@@ -433,7 +430,7 @@ a {
 }
 
 /* RSVP Section */
-#rsvp-container {
+#rsvp {
   background: #28384C;
   color: #FFFFFF;
 }
@@ -449,7 +446,7 @@ a {
 }
 
 /* Photos Section */
-#photos-container {
+#photos {
   background: #FFFFFF;
 }
 

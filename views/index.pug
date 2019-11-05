@@ -5,6 +5,9 @@ html(lang='en')
     meta(charset='utf-8')
     meta(name='viewport', content='width=device-width, initial-scale=1, shrink-to-fit=no')
 
+    // Favicon
+    link(rel='icon', type='image/x-icon', href='https://joyce-andrey.s3.amazonaws.com/favicon.ico')
+
     title Joyce &amp; Andrey | April 4, 2020
 
     // Stylesheets
@@ -63,19 +66,19 @@ html(lang='en')
           a.button.button-grey(href='#rsvp') RSVP!
 
     // Us Section
-    div#us-container.section-container
+    div#us.section-container
       div.inner-content
         div#us-heading.section-heading
-          h1#us hi.
+          h1 hi.
           div.subheading This is what we look like doing stuff together.
       div#us-photos-container
         img(src='https://joyce-andrey.s3.amazonaws.com/imagegallery.png')
 
     // Info Section
-    div#info-container.section-container
+    div#info.section-container
       div.inner-content
         div#info-heading.section-heading
-          h2#info info.
+          h2 info.
           div.subheading Let's party!
         div.row.info-card-container.pt-5
           div#drinks-info.info-card.col-md-5.pb-3
@@ -85,7 +88,8 @@ html(lang='en')
                 h2.py-3 April 3
                 h5.py-4 Come say hello and have a drink with us!
                 h3.pt-2 7pm at SUD Lisboa
-                h5.pt-2 Avenida Brasília Pavilhão Poente
+                h5.pt-2 Avenida Brasília
+                h5 Pavilhão Poente
                 h5 Lisbon 1300-598
                 h4.flip-button.pt-4 Map / More Info
               div.info-card-back
@@ -128,10 +132,10 @@ html(lang='en')
       div#transition-photo-1
 
     // Lisbon Section
-    div#lisbon-container.section-container
+    div#lisbon.section-container
       div.inner-content
         div#lisbon-heading.section-heading
-          h2#lisbon lisbon.
+          h2 lisbon.
           div.subheading.sub-menu
             h4.d-inline
               a.sub-menu-item.active(data-toggle='tab', href='#stay-container') stay
@@ -179,7 +183,7 @@ html(lang='en')
                 p Hotel on Lisbon’s grandest boulevard with romantic decor and a patio.
             div.row.py-3
               div.card.col-md-4
-                img.card-img-top(src='https://joyce-andrey.s3.amazonaws.com/guide/Valverde Hotel.png')
+                img.card-img-top(src='https://joyce-andrey.s3.amazonaws.com/guide/Torel Palace.png')
                 h4.pt-3 Where to stay
                 h3.card-title Torel Palace
                 h5 R. Câmara Pestana 23,
@@ -295,23 +299,23 @@ html(lang='en')
       div#transition-photo-2
 
     // Misc Section
-    div#misc-container.section-container
+    div#misc.section-container
       div.inner-content.text-center
         div#misc-heading.section-heading
-          h2#misc misc.
+          h2 misc.
         div.pt-3
           p We are honored to have you in our lives, and if you can make it to join our celebration, that already means the world to us!
           p If you feel inclined to send a gift, we are registered here:
           a.button.button-blue(href='https://www.zola.com/registry/joyceandandrey', target='_blank') Wedding Registry
 
     // RSVP Section
-    div#rsvp-container.section-container
+    div#rsvp.section-container
       div.inner-content
         div#rsvp-heading.section-heading
-          h2#rsvp rsvp.
+          h2 rsvp.
           div.subheading Hope to see you!
-        div#rsvp-form
-          form.pt-5
+        div#rsvp-form-container
+          form#rsvp-form.pt-5
             div.form-group.form-row
               label.pr-3(for='name') Name
               input#name.form-control(type='text')
@@ -342,16 +346,18 @@ html(lang='en')
               textarea#notes.form-control(type='text', rows='5')
             div.form-row
               button.mx-auto.button.button-white(type='submit') Send RSVP
+        div#rsvp-form-success.d-none
+          p Thank you for your RSVP!
 
     // Photos Section
-    div#photos-container.section-container
+    div#photos.section-container
       div.inner-content
         div#photos-heading.section-heading
-          h2#photos photos.
+          h2 photos.
           div.subheading Add/see photos from the weekend!
         div#photos-content-container.text-center.mt-3
           p This will be set up prior to the event<br>Until then, get excited!
-        div.text-center.pt-3
+        div.text-center.pt-5
           a.button.button-blue(href='#top') Back to top
 
     // Scripts
