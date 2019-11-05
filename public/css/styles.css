@@ -230,24 +230,20 @@ a {
 }
 
 #landing-container {
-  position: relative;
-}
-
-#landing-background {
-  background-color: #F1CFC4;
-  height: 600px;
-  margin-left: 50px;
-  position: absolute;
-  top: 30px;
-  width: calc(100vw - 100px);
-  z-index: -999;
+  z-index: -9999;
 }
 
 #cover-photo-container {
-  background-image: url('/img/photolanding.png');
+  background-image: url('https://joyce-andrey.s3.amazonaws.com/photolanding.png');
   background-position: 50% 30%;
   background-size: cover;
-  height: 600px;
+  min-height: 600px;
+  height: 100vh;
+}
+
+#landing-content-outer-container {
+  margin-left: 50px;
+  position: relative;
 }
 
 #landing-content-container {
@@ -263,8 +259,6 @@ a {
 /* Us Section */
 #us-container {
   background: #F1CFC4;
-  margin-right: 0;
-  margin-top: 70px;
 }
 
 #us-heading {
@@ -278,13 +272,14 @@ a {
 }
 
 #us-photos-container {
-  overflow: scroll;
+  overflow-x: scroll;
+  overflow-y: hidden;
   padding-bottom: 50px;
 }
 
 /* Info Section */
 #info-container {
-  background-image: url('/img/starmapbg.png');
+  background-image: url('https://joyce-andrey.s3.amazonaws.com/starmapbg.png');
   background-size: cover;
 }
 
@@ -311,12 +306,15 @@ a {
 
 .info-card-content {
   backface-visibility: hidden;
+  -webkit-backface-visibility: hidden;
+  -moz-backface-visibility: hidden;
   background: #28384C;
   border: 1px solid #8Fb4E0;
   color: #FFFFFF;
   height: 500px;
   position: absolute;
   text-align: center;
+  width: 100%;
 }
 
 .info-card.flipped .info-card-inner {
@@ -333,9 +331,10 @@ a {
 
 .info-card-back {
   backface-visibility: hidden;
+  -webkit-backface-visibility: hidden;
+  -moz-backface-visibility: hidden;
   background: #FFFFFF;
   height: 500px;
-  overflow-y: scroll;
   position: absolute;
   transform: rotateY(180deg);
 }
@@ -349,6 +348,12 @@ a {
   color: #8FB4E0;
 }
 
+.flip-button .back-arrow {
+  height: 13px;
+  margin-bottom: 3px;
+  padding-right: 8px;
+}
+
 #drinks-map {
   height: 250px;
 }
@@ -356,6 +361,11 @@ a {
 .info-card-back .button {
   letter-spacing: 0;
   text-transform: none;
+}
+
+.info-card-back-button {
+  bottom: 0;
+  position: absolute;
 }
 
 .info-card-back-button .flip-button {
@@ -367,11 +377,11 @@ a {
 
 .transition-photo-container {
   margin-left: 50px;
-  z-index: -9999;
+  z-index: -9998;
 }
 
 #transition-photo-1 {
-  background-image: url('/img/photoinfo.png');
+  background-image: url('https://joyce-andrey.s3.amazonaws.com/photoinfo.png');
   background-size: cover;
   background-position: 15% 100%;
   height: 600px;
@@ -402,7 +412,7 @@ a {
 }
 
 #transition-photo-2 {
-  background-image: url('/img/photomisc.png');
+  background-image: url('https://joyce-andrey.s3.amazonaws.com/photomisc.png');
   background-size: cover;
   background-position: 80% 30%;
   height: 600px;
@@ -434,9 +444,8 @@ a {
   text-transform: uppercase;
 }
 
-#rsvp-form .form-inline input[type="radio"].form-check-input {
-  margin-top: -5px;
-  margin-right: 5px;
+.form-check-inline {
+  margin-bottom: 0.5rem;
 }
 
 /* Photos Section */
@@ -458,12 +467,12 @@ a {
     margin: 0;
   }
 
-  #cover-photo-container {
-    margin-right: 30px;
+  .inner-content {
+    padding: 50px 20px;
   }
 
-  #landing-background {
-    width: calc(100vw - 50px);
+  #landing-content-outer-container {
+    margin-left: 0;
   }
 
   .transition-photo-container {

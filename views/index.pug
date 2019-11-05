@@ -53,14 +53,14 @@ html(lang='en')
             a.dot-nav-link.nav-link(href='#photos', data-toggle='tooltip', data-placement='left', title='photos.')
 
     // Landing Section
-    div#landing-container.section-container
+    div#landing-container.section-container.sticky-top
       div#cover-photo-container
-        div#landing-content-container
-          div#monogram.pb-3
-            img(src='/img/AJmonogram.svg')
-          div#rsvp-button
-            a.button.button-grey(href='#rsvp') RSVP!
-      div#landing-background
+    div#landing-content-outer-container
+      div#landing-content-container
+        div#monogram.pb-3
+          img(src='https://joyce-andrey.s3.amazonaws.com/AJmonogram.svg')
+        div#rsvp-button
+          a.button.button-grey(href='#rsvp') RSVP!
 
     // Us Section
     div#us-container.section-container
@@ -69,7 +69,7 @@ html(lang='en')
           h1#us hi.
           div.subheading This is what we look like doing stuff together.
       div#us-photos-container
-        img(src='/img/imagegallery.png')
+        img(src='https://joyce-andrey.s3.amazonaws.com/imagegallery.png')
 
     // Info Section
     div#info-container.section-container
@@ -94,7 +94,9 @@ html(lang='en')
                   a.button.button-blue(href='https://goo.gl/maps/FZu3r7zcP1BtAa3i8', target='_blank') Open in Google Maps
                 div#drinks-map.info-card-map-container
                 div.info-card-back-button.p-3
-                  div.flip-button &lt; Back
+                  div.flip-button
+                    img.back-arrow(src='https://joyce-andrey.s3.amazonaws.com/back_arrow.svg')
+                    | Back
           div#ceremony-info.info-card.col-md-7.pb-3
             div.info-card-inner
               div.info-card-content.p-3
@@ -107,16 +109,19 @@ html(lang='en')
                 h5.py-3 Ceremony to be followed by drinks, dinner, dancing.
                 h4.flip-button.pt-4 Map / More Info
               div.info-card-back.container
-                div.row
+                div.row.h-100
                   div.info-card-map-text.col-lg-7
-                    div.text-center.py-3
-                      p Attire: Relaxed Formal Dresses of all lengths, Suits, or Dinner Jackets. As the garden has gravel, we suggest shoes or a change of shoes that are ok on it. Bringing a comfortable change of shoes is encouraged regardless!
+                    div.text-center.p-3
+                      p Attire: Relaxed Formal
+                      p Dresses of all lengths, Suits, or Dinner Jackets. As the garden has gravel, we suggest shoes or a change of shoes that are ok on it. Bringing a comfortable change of shoes is encouraged regardless!
                       p April nights can be chilly in Lisbon, we recommend bringing an extra layer.
-                      p There will be childcare and entertainment for children throughout the day.
+                      p There will be entertainment for children throughout the day.
                       a.button.button-blue(href='https://g.page/Palaciofronteira', target='_blank') Open in Google Maps
-                    div.info-card-back-button
-                      div.flip-button &lt; Back
-                  div#ceremony-map.info-card-map-container.col-lg-5
+                    div.info-card-back-button.py-3
+                      div.flip-button
+                        img.back-arrow(src='https://joyce-andrey.s3.amazonaws.com/back_arrow.svg')
+                        | Back
+                  div#ceremony-map.info-card-map-container.col-lg-5.d-none.d-sm-block
 
     // Section Transition Photo
     div.transition-photo-container.sticky-top
@@ -143,7 +148,7 @@ html(lang='en')
                 p Lisbon has many beautiful boutique hotels and airbnbs at a variety of price ranges. We recommend the Príncipe Real, Chiado, and Alfama neighborhoods, but everything in the city will be only a 10-20 minute cab ride to our venue. Below are a couple hotel recommendations, though we suggest exploring to find whatever best suits your interests.
             div.row.py-3
               div.card.col-md-4
-                img.card-img-top(src='/img/guide/Memmo Principe Real Hotel Lisboa.png')
+                img.card-img-top(src='https://joyce-andrey.s3.amazonaws.com/guide/Memmo Principe Real Hotel Lisboa.png')
                 h4.pt-3 Where to stay
                 h3.card-title Memmo Príncipe Real Hotel Lisboa
                 h5 Rua D. Pedro V, 56 J,
@@ -153,7 +158,7 @@ html(lang='en')
                   a(href='http://memmohotels.com/principereal', target='_blank') memmohotels.com/principereal
                 p Boutique hotel in a trendy neighborhood with a vibrant social scene.
               div.card.col-md-4
-                img.card-img-top(src='/img/guide/1908 Lisboa Hotel.png')
+                img.card-img-top(src='https://joyce-andrey.s3.amazonaws.com/guide/1908 Lisboa Hotel.png')
                 h4.pt-3 Where to stay
                 h3.card-title 1908 Lisboa Hotel
                 h5 Largo do Intendente Pina
@@ -164,7 +169,7 @@ html(lang='en')
                   a(href='http://1908lisboahotel.com', target='_blank') 1908lisboahotel.com
                 p Boutique hotel in a historic building with an evolving art gallery.
               div.card.col-md-4
-                img.card-img-top(src='/img/guide/Valverde Hotel.png')
+                img.card-img-top(src='https://joyce-andrey.s3.amazonaws.com/guide/Valverde Hotel.png')
                 h4.pt-3 Where to stay
                 h3.card-title Valverde Hotel
                 h5 Av. da Liberdade 164,
@@ -174,7 +179,7 @@ html(lang='en')
                 p Hotel on Lisbon’s grandest boulevard with romantic decor and a patio.
             div.row.py-3
               div.card.col-md-4
-                img.card-img-top(src='/img/guide/Valverde Hotel.png')
+                img.card-img-top(src='https://joyce-andrey.s3.amazonaws.com/guide/Valverde Hotel.png')
                 h4.pt-3 Where to stay
                 h3.card-title Torel Palace
                 h5 R. Câmara Pestana 23,
@@ -189,19 +194,19 @@ html(lang='en')
                 p Getting to, from, and around Lisbon is relatively simple with a major airport, an extensive public transit system, as well as taxis.
             div.row.py-3
               div.card.col-md-4
-                img.card-img-top(src='/img/guide/Public Transit.png')
+                img.card-img-top(src='https://joyce-andrey.s3.amazonaws.com/guide/Public Transit.png')
                 h4.pt-3 Getting around
                 h3.card-title Public Transit
                 h5
                   a(href='https://www.lisbon.net/transport', target='_blank') lisbon.net/transport
                 p The Lisbon transport network includes metro, bus, tram, train, ferries, and funiculars.
               div.card.col-md-4
-                img.card-img-top(src='/img/guide/Taxis Uber etc.png')
+                img.card-img-top(src='https://joyce-andrey.s3.amazonaws.com/guide/Taxis Uber etc.png')
                 h4.pt-3 Getting around
                 h3.card-title Taxis, Uber, etc
                 p Uber is available throughout the city in Lisbon and Porto. Fares are similar to regular taxis, and there are additional taxi hailing/ payment/rating apps which work as well as Uber, shoudl you want to explore other options.
               div.card.col-md-4
-                img.card-img-top(src='/img/guide/Lisbon Portela Airport.png')
+                img.card-img-top(src='https://joyce-andrey.s3.amazonaws.com/guide/Lisbon Portela Airport.png')
                 h4.pt-3 Getting around
                 h3.card-title Lisbon Portela Airport (LIS)
                 p Lisbon’s major international airport, 7 km (4.3 mi) northeast from the city centre. There are many direct flights from Lisbon to most major cities in Europe, US East and West coasts. It is the main hub of carrier TAP Air Portugal, as well as a hub for low-cost airlines Ryanair and easyJet.
@@ -211,21 +216,21 @@ html(lang='en')
                 p Lisbon has much to offer and this list is just a few ideas to get you started if you have time to explore.
             div.row.py-3
               div.card.col-md-4
-                img.card-img-top(src='/img/guide/Castelo de Sao Jorge.png')
+                img.card-img-top(src='https://joyce-andrey.s3.amazonaws.com/guide/Castelo de Sao Jorge.png')
                 h4.pt-3 What to see
                 h3.card-title Castelo de São Jorge
                 h5 R. de Santa Cruz do Castelo,
                 h5 1100-129 Lisboa, Portugal
                 p Moorish castle occupying a commanding hilltop overlooking the historic centre of the Portuguese city of Lisbon and Tagus River. One of the main tourist sites in Lisbon.
               div.card.col-md-4
-                img.card-img-top(src='/img/guide/Carmo Convent.png')
+                img.card-img-top(src='https://joyce-andrey.s3.amazonaws.com/guide/Carmo Convent.png')
                 h4.pt-3 What to see
                 h3.card-title Carmo Convent
                 h5 Largo do Carmo,
                 h5 1200-092 Lisboa, Portugal
                 p Medieval convent that was ruined during the 1755 Lisbon earthquake. The destroyed Gothic Church of Our Lady of Mount Carmel on the southern facade of the convent is the main trace of the great earthquake still visible in the old city.
               div.card.col-md-4
-                img.card-img-top(src='/img/guide/Jeronimos Monastery.png')
+                img.card-img-top(src='https://joyce-andrey.s3.amazonaws.com/guide/Jeronimos Monastery.png')
                 h4.pt-3 What to see
                 h3.card-title Jerónimos Monastery
                 h5 Praça do Império,
@@ -233,21 +238,21 @@ html(lang='en')
                 p The monastery is one of the most prominent examples of the Portuguese Late Gothic Manueline style of architecture in Lisbon. It is classified a UNESCO World Heritage Site.
             div.row.py-3
               div.card.col-md-4
-                img.card-img-top(src='/img/guide/Miradouro de Sao Pedro de Alcantara.png')
+                img.card-img-top(src='https://joyce-andrey.s3.amazonaws.com/guide/Miradouro de Sao Pedro de Alcantara.png')
                 h4.pt-3 What to see
                 h3.card-title Miradouro de São Pedro de Alcântara
                 h5 R. de São Pedro de Alcântara,
                 h5 1200-470 Lisboa, Portugal
                 p Landscaped terrace offering great panoramic views of the city.
               div.card.col-md-4
-                img.card-img-top(src='/img/guide/Belem Tower.png')
+                img.card-img-top(src='https://joyce-andrey.s3.amazonaws.com/guide/Belem Tower.png')
                 h4.pt-3 What to see
                 h3.card-title Belém Tower
                 h5 Av. Brasília,
                 h5 1400-038 Lisboa, Portugal
                 p Iconic fortified tower, commissioned by King John II to be part of a defence system at the mouth of the Tagus river and a ceremonial gateway to Lisbon. It is a UNESCO World Heritage Site
               div.card.col-md-4
-                img.card-img-top(src='/img/guide/Oceanario de Lisboa.png')
+                img.card-img-top(src='https://joyce-andrey.s3.amazonaws.com/guide/Oceanario de Lisboa.png')
                 h4.pt-3 What to see
                 h3.card-title Oceanário de Lisboa
                 h5 Esplanada Dom Carlos I s/nº,
@@ -258,7 +263,7 @@ html(lang='en')
               div.tab-pane-intro.col-12.pt-3
             div.row.py-3
               div.card.col-md-4
-                img.card-img-top(src='/img/guide/Pasteis de Belem.png')
+                img.card-img-top(src='https://joyce-andrey.s3.amazonaws.com/guide/Pasteis de Belem.png')
                 h4.pt-3 Where to eat
                 h3.card-title Pasteis de Belém
                 h5 Rua Belém 84-92, 
@@ -267,7 +272,7 @@ html(lang='en')
                   a(href='https://pasteisdebelem.pt', target='_blank') pasteisdebelem.pt
                 p Portugal's most famous pastry house (established in 1837), making "Pasteis de Nata" (custard tarts) following an ancient recipe from the Mosteiro dos Jerónimos - which is just around the corner.
               div.card.col-md-4
-                img.card-img-top(src='/img/guide/Taberna Moderna.png')
+                img.card-img-top(src='https://joyce-andrey.s3.amazonaws.com/guide/Taberna Moderna.png')
                 h4.pt-3 Where to eat
                 h3.card-title Taberna Moderna
                 h5 Rua dos Bacalhoeiros 18A, 
@@ -276,11 +281,11 @@ html(lang='en')
                   a(href='https://tabernamoderna.com', target='_blank') tabernamoderna.com
                 p Contemporary restaurant serving Portuguese dishes with a modern twist, plus bar with over 70 gins.
               div.card.col-md-4
-                img.card-img-top(src='/img/guide/Mercado da Ribeira.png')
+                img.card-img-top(src='https://joyce-andrey.s3.amazonaws.com/guide/Mercado da Ribeira.png')
                 h4.pt-3 Where to eat
                 h3.card-title Mercado da Ribeira (Time Out Market)
-                h5 481,, Av. 24 de Julho,
-                h5 1200-109 Lisboa, Portugal
+                h5 Av. 24 de Julho,
+                h5 1200-481 Lisboa, Portugal
                 h5
                   a(href='https://timeoutmarket.com/lisboa/en/', target='_blank') timeoutmarket.com/lisboa/en/
                 p Open, bi-level space with a large food market and local shops.
@@ -297,7 +302,7 @@ html(lang='en')
         div.pt-3
           p We are honored to have you in our lives, and if you can make it to join our celebration, that already means the world to us!
           p If you feel inclined to send a gift, we are registered here:
-          a.button.button-blue(href='#', target='_blank') Wedding Registry
+          a.button.button-blue(href='https://www.zola.com/registry/joyceandandrey', target='_blank') Wedding Registry
 
     // RSVP Section
     div#rsvp-container.section-container
@@ -307,20 +312,21 @@ html(lang='en')
           div.subheading Hope to see you!
         div#rsvp-form
           form.pt-5
-            div.form-group.input-group.form-inline
+            div.form-group.form-row
               label.pr-3(for='name') Name
               input#name.form-control(type='text')
-            div.form-group.form-inline
-              label.pr-3(for='num-guests') Number of Guests
-              select#num-guests.form-control
-                option 1
-                option 2
-                option 3
-                option 4
-            div.form-group.input-group.form-inline
-              label.pr-3(for='guest-names') Names of your guests
-              input#guest-names.form-control(type='text')
-            div.form-group.input-group.form-inline
+            div.form-row
+              div.col-sm-3.form-group
+                label.pr-3(for='num-guests') Number of Guests
+                select#num-guests.form-control
+                  option 1
+                  option 2
+                  option 3
+                  option 4
+              div.col-sm-9.form-group
+                label.pr-3(for='guest-names') Names of your guests
+                input#guest-names.form-control(type='text')
+            div.form-group.form-row.mt-2
               label.pr-3(for='drinks') Will you attend drinks the evening before?
               div.form-check.form-check-inline
                 input#drinks-yes.form-check-input(type='radio', name='drinks', value='yes')
@@ -328,14 +334,14 @@ html(lang='en')
               div.form-check.form-check-inline
                 input#drinks-no.form-check-input(type='radio', name='drinks', value='no')
                 label.form-check-label(for='drinks-no') No
-            div.form-group.input-group.form-inline
+            div.form-group.form-row
               label.pr-3(for='songs') Favorite songs to dance to?
               input#songs.form-control(type='text')
-            div.form-group.input-group
+            div.form-group.form-row
               label.pr-3(for='notes') Notes (dietary restrictions, travel details, or any other notes for Joyce &amp; Andrey)
               textarea#notes.form-control(type='text', rows='5')
-            div.text-center
-              button.button.button-white(type='submit') Send RSVP
+            div.form-row
+              button.mx-auto.button.button-white(type='submit') Send RSVP
 
     // Photos Section
     div#photos-container.section-container
