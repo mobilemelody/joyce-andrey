@@ -135,7 +135,7 @@ a {
 #menu-items-outer-container {
   height: 0;
   position: sticky;
-  top: 60px;
+  top: calc(50% - 240px);
   width: 300px;
   z-index: 999;
 }
@@ -352,7 +352,7 @@ a {
 }
 
 #drinks-map {
-  height: 250px;
+  height: 300px;
 }
 
 .info-card-back .button {
@@ -380,8 +380,9 @@ a {
 #transition-photo-1 {
   background-image: url('https://joyce-andrey.s3.amazonaws.com/photoinfo.png');
   background-size: cover;
-  background-position: 15% 100%;
-  height: 600px;
+  background-position: 15% 80%;
+  height: 100vh;
+  min-height: 600px;
   width: 100%;
 }
 
@@ -412,7 +413,8 @@ a {
   background-image: url('https://joyce-andrey.s3.amazonaws.com/photomisc.png');
   background-size: cover;
   background-position: 80% 30%;
-  height: 600px;
+  height: 100vh;
+  min-height: 600px;
   width: 100%;
 }
 
@@ -439,6 +441,10 @@ a {
   font-weight: 600;
   letter-spacing: 0.1em;
   text-transform: uppercase;
+}
+
+#rsvp-form .form-row {
+  align-items: baseline;
 }
 
 .form-check-inline {
@@ -476,13 +482,13 @@ a {
     margin-left: 0;
   }
 
-  #lisbon-container .section-heading,
-  #photos-container .section-heading {
+  #lisbon .section-heading,
+  #photos .section-heading {
     display: block;
   }
 
-  #lisbon-container .section-heading .subheading,
-  #photos-container .section-heading .subheading {
+  #lisbon .section-heading .subheading,
+  #photos .section-heading .subheading {
     padding-left: 0;
     padding-top: 10px;
   }

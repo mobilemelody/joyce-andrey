@@ -3,7 +3,7 @@ html(lang='en')
   head
     // Meta tags
     meta(charset='utf-8')
-    meta(name='viewport', content='width=device-width, initial-scale=1, shrink-to-fit=no')
+    meta(name='viewport', content='width=device-width, initial-scale=1, user-scalable=no, shrink-to-fit=no')
 
     // Favicon
     link(rel='icon', type='image/x-icon', href='https://joyce-andrey.s3.amazonaws.com/favicon.ico')
@@ -94,7 +94,7 @@ html(lang='en')
                 h4.flip-button.pt-4 Map / More Info
               div.info-card-back
                 div.info-card-map-text.text-center.p-3
-                  p More notes if needed Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas quam erat, feugiat eu turpis id
+                  p Join us for sunset drinks and canapés on the rooftop.
                   a.button.button-blue(href='https://goo.gl/maps/FZu3r7zcP1BtAa3i8', target='_blank') Open in Google Maps
                 div#drinks-map.info-card-map-container
                 div.info-card-back-button.p-3
@@ -117,7 +117,7 @@ html(lang='en')
                   div.info-card-map-text.col-lg-7
                     div.text-center.p-3
                       p Attire: Relaxed Formal
-                      p Dresses of all lengths, Suits, or Dinner Jackets. As the garden has gravel, we suggest shoes or a change of shoes that are ok on it. Bringing a comfortable change of shoes is encouraged regardless!
+                      p Dresses of all lengths, Suits, or Dinner Jackets. We suggest shoes or a change of shoes that are comfortable on gravel in the garden.
                       p April nights can be chilly in Lisbon, we recommend bringing an extra layer.
                       p There will be entertainment for children throughout the day.
                       a.button.button-blue(href='https://g.page/Palaciofronteira', target='_blank') Open in Google Maps
@@ -265,6 +265,7 @@ html(lang='en')
           div#eat-container.tab-pane.fade
             div.row
               div.tab-pane-intro.col-12.pt-3
+                p Lisbon has lots of cool and amazing restaurants that we simply cannot properly cover on our site (so we didn’t really try!). We recommend using Yelp, or a favorite travel/restaurant guide to find recommendations tailored to you.
             div.row.py-3
               div.card.col-md-4
                 img.card-img-top(src='https://joyce-andrey.s3.amazonaws.com/guide/Pasteis de Belem.png')
@@ -318,10 +319,10 @@ html(lang='en')
           form#rsvp-form.pt-5
             div.form-group.form-row
               label.pr-3(for='name') Name
-              input#name.form-control(type='text')
+              input#name.form-control(type='text', name='name')
             div.form-row
               div.col-sm-3.form-group
-                label.pr-3(for='num-guests') Number of Guests
+                label.pr-3(for='num-guests', name='num_guests') Number of Guests
                 select#num-guests.form-control
                   option 1
                   option 2
@@ -329,7 +330,7 @@ html(lang='en')
                   option 4
               div.col-sm-9.form-group
                 label.pr-3(for='guest-names') Names of your guests
-                input#guest-names.form-control(type='text')
+                input#guest-names.form-control(type='text', name='guest_names')
             div.form-group.form-row.mt-2
               label.pr-3(for='drinks') Will you attend drinks the evening before?
               div.form-check.form-check-inline
