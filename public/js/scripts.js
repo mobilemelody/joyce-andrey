@@ -22,22 +22,24 @@ $(document).ready(function(){
 
 	$('#rsvp-form').submit(function(event) {
 		event.preventDefault();
+
+		let data = {
+			name: $('#name').val(),
+			num_guests: $('#num-guests').val(),
+			guest_names: $('#guest-names').val(),
+			drinks: $('#drinks').val(),
+			songs: $('#songs').val(),
+			notes: $('#notes').val()
+		};
+		console.log(data);
 		
 		$.ajax({
-			global: false,
 			type: 'POST',
 			url: '/',
-			dataType: 'html',
-			data: {
-				name: $('#name').val(),
-				num_guests: $('#num_guests').val(),
-				guest_names: $('#guest_names').val(),
-				drinks: $('#drinks').val(),
-				songs: $('#songs').val(),
-				notes: $('#notes').val()
-			},
+			dataType: 'json',
+			data: JSON.stringify(data),
+			contentType: 'application/json'
 			success: function (result) {
-				console.log(result);
 				$('#rsvp-form-container').addClass('d-none');
 				$('#rsvp-form-success').removeClass('d-none');
 			},
