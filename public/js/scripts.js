@@ -20,6 +20,18 @@ $(document).ready(function(){
 		$('.active').removeClass('active');
 	});
 
+	// Show guest names field when number of guests is 2+
+	$('#num-guests').change(function() {
+		if ($(this).val() == '1') {
+			$('#guest-names-container').addClass('d-none');
+			$('#guest-names').prop('required', false);
+		} else {
+			$('#guest-names-container').removeClass('d-none');
+			$('#guest-names').prop('required', true);
+		}
+	});
+
+	// Submit rsvp form
 	$('#rsvp-form').submit(function(event) {
 		event.preventDefault();
 
@@ -27,18 +39,17 @@ $(document).ready(function(){
 			name: $('#name').val(),
 			num_guests: $('#num-guests').val(),
 			guest_names: $('#guest-names').val(),
-			drinks: $('#drinks').val(),
+			drinks: $('.drinks-radio:checked').val(),
 			songs: $('#songs').val(),
 			notes: $('#notes').val()
 		};
-		console.log(data);
 		
 		$.ajax({
 			type: 'POST',
 			url: '/',
 			dataType: 'json',
 			data: JSON.stringify(data),
-			contentType: 'application/json'
+			contentType: 'application/json',
 			success: function (result) {
 				$('#rsvp-form-container').addClass('d-none');
 				$('#rsvp-form-success').removeClass('d-none');

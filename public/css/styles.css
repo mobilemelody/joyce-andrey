@@ -451,6 +451,11 @@ a {
   margin-bottom: 0.5rem;
 }
 
+#rsvp-form-success {
+  font-size: 1.5rem;
+  height: 600px;
+}
+
 /* Photos Section */
 #photos {
   background: #FFFFFF;
