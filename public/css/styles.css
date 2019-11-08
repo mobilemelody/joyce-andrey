@@ -177,12 +177,6 @@ a {
   color: #8FB4E0;
 }
 
-#menu-container .collapsing.width {
-  width: 0;
-  height: auto;
-  .transition(width 0.35s ease);
-}
-
 /* Dot Navigation Menu */
 #dot-nav-outer-container {
   float: right;

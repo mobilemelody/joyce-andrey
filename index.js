@@ -23,18 +23,21 @@ app.post('/', function (req, res) {
 	const scopes = 'https://www.googleapis.com/auth/spreadsheets';
 	const sheets = google.sheets('v4');
 	
+	// Google authorization
 	let jwt = new google.auth.JWT(
     process.env.GOOGLE_CLIENT_EMAIL, 
     null, 
     process.env.GOOGLE_PRIVATE_KEY.replace(/\\n/g, '\n'), 
     scopes
   );
-  let row = [];
 
+	// Add form data
+  let row = [];
   for (let key in req.body) {
   	row.push(req.body[key]);
   }
   
+  // Append values to spreadsheet
   sheets.spreadsheets.values.append({
     spreadsheetId: '11_7sHchw2yD3MI1UK5mP5cD4m5Dg5BHsguqT9GidpwI',
     range: 'A:F',
