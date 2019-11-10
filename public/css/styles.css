@@ -119,7 +119,7 @@ a {
 /* Menu */
 #menu-container {
   height: 0;
-  position: sticky;
+  position: fixed;
   top: 0px;
   width: 50px;
   z-index: 999;
@@ -134,7 +134,7 @@ a {
 
 #menu-items-outer-container {
   height: 0;
-  position: sticky;
+  position: fixed;
   top: calc(50% - 240px);
   width: 300px;
   z-index: 999;
@@ -179,9 +179,9 @@ a {
 
 /* Dot Navigation Menu */
 #dot-nav-outer-container {
-  float: right;
   height: 0;
-  position: sticky;
+  position: fixed;
+  right: 0px;
   top: 0;
   width: 50px;
   z-index: 999;
@@ -295,7 +295,7 @@ a {
   width: 100%;
 }
 
-.info-card-content {
+.info-card-front {
   backface-visibility: hidden;
   -webkit-backface-visibility: hidden;
   -moz-backface-visibility: hidden;
@@ -312,11 +312,11 @@ a {
   transform: rotateY(180deg);
 }
 
-.info-card-content h4 {
+.info-card-front h4 {
   text-transform: uppercase;
 }
 
-.info-card-content h2 {
+.info-card-front h2 {
   color: #8FB4E0;
 }
 
@@ -328,6 +328,7 @@ a {
   height: 500px;
   position: absolute;
   transform: rotateY(180deg);
+  transition: transform 0.6s;
 }
 
 .flip-button {
@@ -378,6 +379,21 @@ a {
   height: 100vh;
   min-height: 600px;
   width: 100%;
+}
+
+/* IE fixes for info cards */
+.no-preserve3d .info-card.flipped .info-card-front {
+  transform: rotateY(180deg);
+}
+
+.no-preserve3d .info-card.flipped .info-card-back {
+  transform: rotateY(0deg);
+}
+
+.no-preserve3d .info-card-front {
+  transform: rotateY(0deg);
+  transition: transform 0.6s;
+  z-index: 2;
 }
 
 /* Lisbon Section */
@@ -461,6 +477,17 @@ a {
   display: flex;
   height: 500px;
   justify-content: center;
+}
+
+/* Footer */
+#footer {
+  background: #FFFFFF;
+}
+
+.footer-text {
+  font-size: 0.8rem;
+  font-weight: 600;
+  padding: 0 5px;
 }
 
 /* Mobile Styles */

@@ -3,6 +3,7 @@ require('dotenv').config();
 const express = require('express');
 const pug = require('pug');
 const bodyParser = require('body-parser');
+const modernizr = require("modernizr");
 const {google} = require('googleapis');
 
 const app = express();
