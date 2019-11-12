@@ -107,7 +107,7 @@ html(lang='en')
                 h4.pt-2 Saturday
                 h2.py-3 April 4
                 h5.py-4 Join us at 3pm at the
-                h3.pt-2 Palacio dos Marqueses de Frontiera
+                h3.pt-2 Palácio dos Marqueses de Frontiera
                 h5.pt-2 Largo Sao Domingos de Benfica 1
                 h5 Fronteira Palace, Lisbon 1500-554
                 h5.py-3 Ceremony to be followed by drinks, dinner, dancing.
@@ -208,7 +208,7 @@ html(lang='en')
                 img.card-img-top(src='https://joyce-andrey.s3.amazonaws.com/guide/Taxis Uber etc.png')
                 h4.pt-3 Getting around
                 h3.card-title Taxis, Uber, etc
-                p Uber is available throughout the city in Lisbon and Porto. Fares are similar to regular taxis, and there are additional taxi hailing/ payment/rating apps which work as well as Uber, shoudl you want to explore other options.
+                p Uber is available throughout the city in Lisbon and Porto. Fares are similar to regular taxis, and there are additional taxi hailing/ payment/rating apps which work as well as Uber, should you want to explore other options.
               div.card.col-md-4
                 img.card-img-top(src='https://joyce-andrey.s3.amazonaws.com/guide/Lisbon Portela Airport.png')
                 h4.pt-3 Getting around
@@ -318,7 +318,7 @@ html(lang='en')
         div#rsvp-form-container
           form#rsvp-form.pt-5
             div.form-group.form-row
-              label.pr-3(for='name') Name
+              label.pr-3(for='name') Your name
               input#name.form-control(type='text', name='name', required)
             div.form-row
               div.col-sm-3.form-group
@@ -334,10 +334,10 @@ html(lang='en')
             div.form-group.form-row.mt-2
               label.pr-3(for='drinks') Will you attend drinks the evening before?
               div.form-check.form-check-inline
-                input.drinks-radio.form-check-input(type='radio', name='drinks', value='yes')
+                input#drinks-yes.drinks-radio.form-check-input(type='radio', name='drinks', value='yes')
                 label.form-check-label(for='drinks-yes') Yes
               div.form-check.form-check-inline
-                input.drinks-radio.form-check-input(type='radio', name='drinks', value='no')
+                input#drinks-no.drinks-radio.form-check-input(type='radio', name='drinks', value='no')
                 label.form-check-label(for='drinks-no') No
             div.form-group.form-row
               label.pr-3(for='songs') Favorite songs to dance to?
@@ -363,8 +363,7 @@ html(lang='en')
 
     // Footer
     div#footer.text-center.pb-3
-      div.footer-text.d-inline Design: 
-        a(href='http://portfolio.joycechan.net', target='_blank') Joyce Chan
+      div.footer-text.d-inline Design: Joyce (duh)
       div.footer-text.d-inline |
       div.footer-text.d-inline Development: 
         a(href='http://melodyreebs.com', target='_blank') Melody Reebs
