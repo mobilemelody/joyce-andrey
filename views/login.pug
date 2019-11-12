@@ -1,0 +1,34 @@
+doctype html
+html(lang='en')
+  head
+    // Meta tags
+    meta(charset='utf-8')
+    meta(name='viewport', content='width=device-width, initial-scale=1, user-scalable=no, shrink-to-fit=no')
+
+    // Favicon
+    link(rel='icon', type='image/x-icon', href='https://joyce-andrey.s3.amazonaws.com/favicon.ico')
+
+    title Joyce &amp; Andrey | April 4, 2020
+
+    // Stylesheets
+    link(rel='stylesheet', href='https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css')
+    link(rel='stylesheet', href='/css/login.css')
+
+  body
+    // Header
+    div#header-container.container
+      div.row.py-3
+        h4.mx-auto Joyce &amp; Andrey
+
+    // Login form
+    div#form-container
+      form#login-form(method='post', action='/')
+        div.form-group.form-row
+          div.col-sm-9
+            label.pr-3(for='password') Password
+            input#password.form-control(type='text', name='password', required)
+            small.form-text #{error} &nbsp;
+          div.col-sm-3
+            button.button.button-white Enter
+            small.form-text &nbsp;
+          

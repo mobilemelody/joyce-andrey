@@ -3,6 +3,7 @@ require('dotenv').config();
 const express = require('express');
 const pug = require('pug');
 const bodyParser = require('body-parser');
+const session = require('express-session');
 const modernizr = require("modernizr");
 const {google} = require('googleapis');
 
@@ -14,13 +15,18 @@ app.set('view engine', 'pug');
 
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use(bodyParser.json());
+app.use(session({secret:'secret'}));
 app.use(express.static('public'));
 
 app.get('/', function (req, res) {
-  res.render('index');
+  if (req.session.token) {
+    res.render('index');
+  } else {
+    res.render('login');
+  }
 });
 
-app.post('/', function (req, res) {
+app.post('/rsvp', function (req, res) {
 	const scopes = 'https://www.googleapis.com/auth/spreadsheets';
 	const sheets = google.sheets('v4');
 	
@@ -53,6 +59,17 @@ app.post('/', function (req, res) {
       res.send(result);
     }
   });
+});
+
+app.post('/', function (req, res) {
+  let data = {};
+  if (req.body.password == process.env.WEBSITE_PASSWORD) {
+    req.session.token = true;
+    res.render('index');
+  } else {
+    data.error = "Incorrect password";
+    res.render('login', data);
+  }
 });
 
 app.listen(PORT, function(){

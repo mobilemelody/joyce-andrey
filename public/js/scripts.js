@@ -46,7 +46,7 @@ $(document).ready(function(){
 		
 		$.ajax({
 			type: 'POST',
-			url: '/',
+			url: '/rsvp',
 			dataType: 'json',
 			data: JSON.stringify(data),
 			contentType: 'application/json',
