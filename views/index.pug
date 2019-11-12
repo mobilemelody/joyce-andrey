@@ -27,16 +27,17 @@ html(lang='en')
       div#menu-link-container
         h4.menu-header-link.menu-open-link(data-toggle='collapse', data-target='#menu-items-container') Menu +
     div#menu-items-outer-container
-      div#menu-items-container.p-5.collapse
-        h4.menu-header-link.menu-close-link(data-toggle='collapse', data-target='#menu-items-container') Menu -
-        div#menu-items
-          nav.nav.flex-column
-            a.nav-link(href='#us') us.
-            a.nav-link(href='#info') info.
-            a.nav-link(href='#lisbon') lisbon.
-            a.nav-link(href='#misc') misc.
-            a.nav-link(href='#rsvp') rsvp.
-            a.nav-link(href='#photos') photos.
+      div#menu-items-container.collapse.width
+        div#menu-items-inner-container.p-5
+          h4.menu-header-link.menu-close-link(data-toggle='collapse', data-target='#menu-items-container') Menu -
+          div#menu-items
+            nav.nav.flex-column
+              a.nav-link(href='#us') us.
+              a.nav-link(href='#info') info.
+              a.nav-link(href='#lisbon') lisbon.
+              a.nav-link(href='#misc') misc.
+              a.nav-link(href='#rsvp') rsvp.
+              a.nav-link(href='#photos') photos.
     
     // Dot Navigation Menu
     div#dot-nav-outer-container.d-none.d-sm-block

@@ -141,8 +141,16 @@ a {
 }
 
 #menu-items-container {
-  background-color: #28384C;
   height: 480px;
+}
+
+#menu-items-container.collapsing.width {
+  transition-property: width, visibility;
+  width: 0;
+}
+
+#menu-items-inner-container {
+  background-color: #28384C;
   position: relative;
   width: 300px;
 }
