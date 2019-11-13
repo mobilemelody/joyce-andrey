@@ -23,10 +23,10 @@ html(lang='en')
     // Login form
     div#form-container
       form#login-form(method='post', action='/')
-        div.form-group.form-row
+        div.form-row
           div.col-sm-9
             label.pr-3(for='password') Password
-            input#password.form-control(type='text', name='password', required)
+            input#password.form-control(type='text', name='password', autocomplete='off', required)
             small.form-text #{error} &nbsp;
           div.col-sm-3
             button.button.button-white Enter

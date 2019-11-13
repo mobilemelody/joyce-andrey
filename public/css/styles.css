@@ -337,6 +337,7 @@ a {
   position: absolute;
   transform: rotateY(180deg);
   transition: transform 0.6s;
+  width: 100%;
 }
 
 .flip-button {
