@@ -499,6 +499,24 @@ a {
   padding: 0 5px;
 }
 
+/* Loading Modal */
+#loading-modal {
+  background: #FFFFFF;
+  display: block;
+  height: 100%;
+  left: 0;
+  position: fixed;
+  text-align: center;
+  top: 0;
+  width: 100%;
+  z-index: 999;
+}
+
+#loading-spinner {
+  top: 50%;
+  position: relative;
+}
+
 /* Mobile Styles */
 @media screen and (max-width: 576px) {
   .section-container {

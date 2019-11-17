@@ -1,3 +1,7 @@
+$(window).on('load', function() {
+   $('#loading-modal').fadeOut(1000);
+});
+
 $(document).ready(function(){
 	// Initialize tooltips for dot nav menu
   $("[data-toggle='tooltip']").tooltip();
