@@ -24,6 +24,16 @@ $(document).ready(function(){
 		$('.active').removeClass('active');
 	});
 
+	// Toggle additional questions based on guest attending
+	$('#wedding-response').change(function() {
+		console.log('click');
+		if ($('#wedding-yes').is(':checked')) {
+			$('#rsvp-attending').removeClass('d-none');
+		} else {
+			$('#rsvp-attending').addClass('d-none');
+		}
+	});
+
 	// Show guest names field when number of guests is 2+
 	$('#num-guests').change(function() {
 		if ($(this).val() == '1') {
@@ -41,7 +51,8 @@ $(document).ready(function(){
 
 		let data = {
 			name: $('#name').val(),
-			num_guests: $('#num-guests').val(),
+			attending: $('.wedding-radio:checked').val(),
+			num_guests: $('.wedding-radio:checked').val() == 'yes' ? $('#num-guests').val() : null,
 			guest_names: $('#guest-names').val(),
 			drinks: $('.drinks-radio:checked').val(),
 			songs: $('#songs').val(),

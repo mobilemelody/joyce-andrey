@@ -466,6 +466,10 @@ a {
   align-items: baseline;
 }
 
+#rsvp-form-container {
+  min-height: 600px;
+}
+
 .form-check-inline {
   margin-bottom: 0.5rem;
 }
