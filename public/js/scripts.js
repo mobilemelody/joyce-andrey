@@ -31,6 +31,7 @@ $(document).ready(function(){
 			$('#rsvp-attending').removeClass('d-none');
 		} else {
 			$('#rsvp-attending').addClass('d-none');
+			$('#guest-names').prop('required', false);
 		}
 	});
 
