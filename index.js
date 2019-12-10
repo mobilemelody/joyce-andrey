@@ -58,7 +58,7 @@ app.post('/rsvp', function (req, res) {
   // Append values to spreadsheet
   sheets.spreadsheets.values.append({
     spreadsheetId: '11_7sHchw2yD3MI1UK5mP5cD4m5Dg5BHsguqT9GidpwI',
-    range: 'A:F',
+    range: 'A:G',
     auth: jwt,
     valueInputOption: 'USER_ENTERED',
     resource: {values: [row]}
