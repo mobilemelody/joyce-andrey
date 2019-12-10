@@ -55,7 +55,7 @@ $(document).ready(function(){
 			attending: $('.wedding-radio:checked').val(),
 			num_guests: $('.wedding-radio:checked').val() == 'yes' ? $('#num-guests').val() : null,
 			guest_names: $('#guest-names').val(),
-			drinks: $('.drinks-radio:checked').val(),
+			drinks: $('.drinks-radio:checked').val() || null,
 			songs: $('#songs').val(),
 			notes: $('#notes').val()
 		};
