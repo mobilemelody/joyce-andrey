@@ -4,7 +4,6 @@ const express = require('express');
 const pug = require('pug');
 const bodyParser = require('body-parser');
 const session = require('express-session');
-const modernizr = require("modernizr");
 const {google} = require('googleapis');
 
 const app = express();
@@ -57,7 +56,7 @@ app.post('/rsvp', function (req, res) {
   
   // Append values to spreadsheet
   sheets.spreadsheets.values.append({
-    spreadsheetId: '11_7sHchw2yD3MI1UK5mP5cD4m5Dg5BHsguqT9GidpwI',
+    spreadsheetId: '14oDSZxgKmAb-DOspGwhQW4EJ6I3Mxe106WjR3fCP2co',
     range: 'A:G',
     auth: jwt,
     valueInputOption: 'USER_ENTERED',

@@ -19,7 +19,6 @@
     "express": "^4.17.1",
     "express-session": "^1.17.0",
     "googleapis": "^39.2.0",
-    "modernizr": "^3.8.0",
     "pug": "^2.0.4"
   }
 }

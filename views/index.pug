@@ -8,7 +8,7 @@ html(lang='en')
     // Favicon
     link(rel='icon', type='image/x-icon', href='https://joyce-andrey.s3.amazonaws.com/favicon.ico')
 
-    title Joyce &amp; Andrey | April 4, 2020
+    title Joyce &amp; Andrey | October 31, 2020
 
     // Stylesheets
     link(rel='stylesheet', href='https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css')
@@ -86,7 +86,7 @@ html(lang='en')
             div.info-card-inner
               div.info-card-front.p-3
                 h4.py-2 Friday
-                h2.py-3 April 3
+                h2.py-3 October 30
                 h5.py-4 Come say hello and have a drink with us!
                 h3.pt-2 7pm at SUD Lisboa
                 h5.pt-2 Avenida Brasília
@@ -106,7 +106,7 @@ html(lang='en')
             div.info-card-inner
               div.info-card-front.p-3
                 h4.pt-2 Saturday
-                h2.py-3 April 4
+                h2.py-3 October 31
                 h5.py-4 Join us at 3pm at the
                 h3.pt-2 Palácio dos Marqueses de Frontiera
                 h5.pt-2 Largo Sao Domingos de Benfica 1
@@ -120,7 +120,7 @@ html(lang='en')
                       p Attire: Relaxed Formal
                       p Dresses of all lengths, Suits/Blazers/Dinner Jackets
                       p The garden can be muddy or slippery at times.  We suggest shoes or a change of shoes that prioritize comfort and stability.
-                      p April nights can be chilly in Lisbon, we recommend bringing an extra layer.
+                      p October nights can be chilly in Lisbon, we recommend bringing an extra layer.
                       a.button.button-blue(href='https://g.page/Palaciofronteira', target='_blank') Open in Google Maps
                     div.info-card-back-button.py-3
                       div.flip-button
@@ -336,8 +336,50 @@ html(lang='en')
       div.inner-content
         div#rsvp-heading.section-heading
           h2 rsvp.
+          div.subheading Please RSVP by August 15. Hope to see you!
         div#rsvp-form-container.pt-3
-          div.subheading The RSVP form is now closed. Please reach out directly to Andrey or Joyce.
+          form#rsvp-form.pt-5
+            div.form-group.form-row
+              label.pr-3(for='name') Your name
+              input#name.form-control(type='text', name='name', required)
+            div#wedding-response.form-group.form-row.mt-2
+              label.pr-3(for='wedding') Will you be attending?
+              div.form-check.form-check-inline
+                input#wedding-yes.wedding-radio.form-check-input(type='radio', name='wedding', value='yes', required)
+                label.form-check-label(for='wedding-yes') Yes
+              div.form-check.form-check-inline
+                input#wedding-no.wedding-radio.form-check-input(type='radio', name='wedding', value='no', required)
+                label.form-check-label(for='wedding-no') No
+            div#rsvp-attending.d-none
+              div.form-row
+                div.col-sm-3.form-group
+                  label.pr-3(for='numGuests') Number of Guests
+                  select#num-guests.form-control(name='numGuests')
+                    option(value='1') 1
+                    option(value='2') 2
+                    option(value='3') 3
+                    option(value='4') 4
+                div#guest-names-container.col-sm-9.form-group.d-none
+                  label.pr-3(for='guestNames') Names of your guests
+                  input#guest-names.form-control(type='text', name='guestNames')
+              div.form-group.form-row.mt-2
+                label.pr-3(for='drinks') Will you attend drinks the evening before?
+                div.form-check.form-check-inline
+                  input#drinks-yes.drinks-radio.form-check-input(type='radio', name='drinks', value='yes')
+                  label.form-check-label(for='drinks-yes') Yes
+                div.form-check.form-check-inline
+                  input#drinks-no.drinks-radio.form-check-input(type='radio', name='drinks', value='no')
+                  label.form-check-label(for='drinks-no') No
+              div.form-group.form-row
+                label.pr-3(for='songs') Favorite songs to dance to?
+                input#songs.form-control(type='text')
+            div.form-group.form-row
+              label.pr-3(for='notes') Notes (dietary restrictions, travel details, or any other notes for Joyce &amp; Andrey)
+              textarea#notes.form-control(type='text', rows='5')
+            div.form-row
+              button.mx-auto.button.button-white(type='submit') Send RSVP
+        div#rsvp-form-success.pt-5.d-none
+          p Thank you for your RSVP!
 
         
 
