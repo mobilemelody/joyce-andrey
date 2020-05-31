@@ -2,12 +2,14 @@ $(document).ready(function(){
 	L.mapbox.accessToken = 'pk.eyJ1IjoibW9iaWxlbWVsb2R5IiwiYSI6ImNpanJudHRyMjBjemh0aG01OGwzbXlnODUifQ.IFhw5wfKK-XQjitGxz1wFg';
 
 	// Setup drinks map
-	const drinksMap = L.mapbox.map('drinks-map', 'mobilemelody.0c8b0204', { minZoom: 8 })
-    .setView([38.696462, -9.191909], 12);
+	const drinksMap = L.mapbox.map('drinks-map')
+    .setView([38.696462, -9.191909], 12)
+    .addLayer(L.mapbox.styleLayer('mapbox://styles/mobilemelody/ckavcqjbl1rby1iper2alqgmt'));
 
   // Setup ceremony map
-	const ceremonyMap = L.mapbox.map('ceremony-map', 'mobilemelody.0c8b0204', { minZoom: 8 })
-    .setView([38.740155, -9.180347], 12);
+	const ceremonyMap = L.mapbox.map('ceremony-map')
+    .setView([38.740155, -9.180347], 12)
+    .addLayer(L.mapbox.styleLayer('mapbox://styles/mobilemelody/ckavcqjbl1rby1iper2alqgmt'));
 
   // Add marker to drinks map
 	L.mapbox.featureLayer([{
